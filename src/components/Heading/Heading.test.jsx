@@ -1,33 +1,30 @@
 import { screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import { Heading } from './index';
+import { Heading } from '.';
 import { renderTheme } from '../../styles/render-theme';
 import { theme } from '../../styles/theme';
 
 describe('<Heading />', () => {
-  //DO NOT PASS
   it('should render with default values', () => {
     renderTheme(<Heading>texto</Heading>);
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
-      color: theme.colors.white,
+      color: theme.colors.primaryColor,
       'font-size': theme.font.sizes.xhuge,
       'text-transform': 'none',
     });
   });
 
-  //DO NOT PASS
   it('should render with white color', () => {
     renderTheme(<Heading colorDark={false}>texto</Heading>);
     const heading = screen.getByRole('heading', { name: 'texto' });
 
     expect(heading).toHaveStyle({
-      color: theme.colors.primaryColor,
+      color: theme.colors.white,
     });
   });
 
-  //DO PASS
   it('should render correct heading sizes', () => {
     const { rerender } = renderTheme(<Heading size="small">texto</Heading>);
     const heading = screen.getByRole('heading', { name: 'texto' });
@@ -38,7 +35,7 @@ describe('<Heading />', () => {
 
     rerender(
       <ThemeProvider theme={theme}>
-        <Heading size="large">texto</Heading>
+        <Heading size="big">texto</Heading>
       </ThemeProvider>,
     );
 
@@ -67,7 +64,6 @@ describe('<Heading />', () => {
     });
   });
 
-  //DO PASS
   it('should render correct font-size when using mobile', () => {
     const { rerender } = renderTheme(<Heading size="huge">texto</Heading>);
     const heading = screen.getByRole('heading', { name: 'texto' });
@@ -77,7 +73,6 @@ describe('<Heading />', () => {
     });
   });
 
-  //DO PASS
   it('should render with uppercase letters', () => {
     renderTheme(<Heading uppercase={true}>texto</Heading>);
     const heading = screen.getByRole('heading', { name: 'texto' });
@@ -87,7 +82,6 @@ describe('<Heading />', () => {
     });
   });
 
-  //DO PASS
   it('should render correct heading element', () => {
     const { container } = renderTheme(<Heading as="h6">texto</Heading>);
     const heading = screen.getByRole('heading', { name: 'texto' });
