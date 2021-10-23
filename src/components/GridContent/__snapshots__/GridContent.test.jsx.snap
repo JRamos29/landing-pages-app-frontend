@@ -2,7 +2,7 @@
 
 exports[`<GridContent /> should render grid content 1`] = `
 .c3 {
-  color: #FFFFFF;
+  color: #0A1128;
   font-size: 6.4rem;
   text-transform: uppercase;
 }
@@ -58,11 +58,11 @@ exports[`<GridContent /> should render grid content 1`] = `
       <div
         class="c2"
       >
-        <h1
+        <h2
           class="c3"
         >
           Some nice title
-        </h1>
+        </h2>
         <div
           class="c4"
         >
@@ -162,7 +162,7 @@ exports[`<GridContent /> should render grid content 1`] = `
 
 exports[`<GridContent /> should render grid content with background=undefined 1`] = `
 .c3 {
-  color: #FFFFFF;
+  color: #0A1128;
   font-size: 6.4rem;
   text-transform: uppercase;
 }
@@ -218,11 +218,11 @@ exports[`<GridContent /> should render grid content with background=undefined 1`
       <div
         class="c2"
       >
-        <h1
+        <h2
           class="c3"
         >
           Some nice title
-        </h1>
+        </h2>
         <div
           class="c4"
         >
