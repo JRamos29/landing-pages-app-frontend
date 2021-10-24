@@ -1,6 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
+import {
+  createGlobalStyle
+} from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle `
   * {
     margin: 0;
     padding: 0;
@@ -27,5 +29,10 @@ export const GlobalStyles = createGlobalStyle`
   }
   a {
     color: ${({ theme }) => theme.colors.secondaryColor};
+  }
+
+  .table {
+    width: 100%;
+    overflow-y: auto;
   }
 `;
