@@ -1,6 +1,6 @@
 # Landing Pages App (Frontend)
 
-A react application that works as frontend for the content provided by [Landing Pages App (Backend)]([https://www.x.y](https://github.com/JRamos29/landing-pages-app-backend)).
+A react application that works as frontend for the content provided by [Landing Pages App (Backend)](https://github.com/JRamos29/landing-pages-app-backend).
 
 The application is developed based on react components using some features as:
 
